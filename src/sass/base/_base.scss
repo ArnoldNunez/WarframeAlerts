@@ -1,0 +1,27 @@
+/**
+ * \file _base.scss
+ *
+ * Partial sass file for low level css such as resetting body 
+ * and html tags.
+ */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    /* Force box-sizing property to be inherited by all elements */
+    box-sizing: inherit;
+}
+
+html {
+    // 16px is default but we want 10px default: 10px/16px = .625 
+    //  => 10 pixel equivalent in percent. Now 1rem = 10px
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 30px;
+}

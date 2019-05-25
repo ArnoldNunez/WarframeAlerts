@@ -1,9 +1,30 @@
-import React from "react";
-import ReactDOM from "react-dom"
+import React from 'react';
+
+// Warframe worldstate API: https://docs.warframestat.us/#tag/worldstate
+
+import Alerts from './components/Alerts';
+import Events from './components/Events';
+import Fissures from './components/Fissures';
+import Invasions from './components/Invasions';
 
 class App extends React.Component {
+    constructor() {
+        super();
+    }
+
     render() {
-        return <h1>Hello World from React Boilerplate</h1>;
+
+
+        return (
+            <div className="content">
+                <h1>Hello World from React Boilerplate</h1>
+
+                <Alerts />
+                <Events />
+                <Fissures />
+                <Invasions />
+            </div>
+        )
     }
 }
 
