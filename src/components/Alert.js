@@ -7,7 +7,20 @@ import React from 'react';
 function Alert(props) {
 
     return (
-        <h1>This is an alert.</h1>
+        <>
+            <span>{props.description}</span>
+            <span>{props.id}</span>
+            <span>{props.node}</span>
+            <span>{props.type}</span>
+            
+            <span>{props.faction}</span>
+            <span>{props.activation}</span>
+            <span>{props.rewardItems}</span>
+            <span>{props.rewardCredits}</span>
+            <span>{props.rewardThumbnail}</span>
+
+            <span>{props.expiration}</span>
+        </>
     );
 }
 

@@ -10,16 +10,20 @@ import Invasions from './components/Invasions';
 class App extends React.Component {
     constructor() {
         super();
+
+        this.state = {
+            platform: 'pc'
+        }
     }
 
     render() {
-
+        const platform = this.state.platform;
 
         return (
             <div className="content">
                 <h1>Hello World from React Boilerplate</h1>
 
-                <Alerts />
+                <Alerts platform={platform}/>
                 <Events />
                 <Fissures />
                 <Invasions />
