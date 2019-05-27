@@ -24,9 +24,9 @@ class App extends React.Component {
                 <h1>Hello World from React Boilerplate</h1>
 
                 <Alerts platform={platform}/>
-                <Events />
-                <Fissures />
-                <Invasions />
+                <Events platform={platform}/>
+                <Fissures platform={platform} />
+                <Invasions platform={platform}/>
             </div>
         )
     }

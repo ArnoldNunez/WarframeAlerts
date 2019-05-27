@@ -7,7 +7,15 @@ import React from 'react';
 function Fissure(props) {
 
     return (
-        <h1>This is a Fissure.</h1>
+        <>
+            <div>{props.id}</div>
+            <div>{props.node}</div>
+            <div>{props.type}</div>
+            <div>{props.activation}</div>
+            <div>{props.expiration}</div>
+            <div>{props.faction}</div>
+            <div>{props.tier}</div>
+        </>
     );
 }
 

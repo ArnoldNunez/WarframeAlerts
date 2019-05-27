@@ -47,7 +47,6 @@ class Alerts extends React.Component {
             return <p>Loading...</p>;
         }
 
-        console.log (alerts);
         const alertComponents = alerts.map((alert) => {
             return (
                 <li className='alert-list--item' key={alert.id}>
@@ -66,6 +65,7 @@ class Alerts extends React.Component {
                 </li>
             );
         });
+        
         return (
             <div className="alerts">
                 <h1>This is an Alerts component</h1>

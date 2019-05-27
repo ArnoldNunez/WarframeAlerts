@@ -7,7 +7,20 @@ import React from 'react';
 function Invasion(props) {
 
     return (
-        <h1>This is an Invasion.</h1>
+        <>
+            <div>{props.id}</div>
+            <div>{props.node}</div>
+            
+            <div>{props.attackingFaction}</div>
+            <div>{props.defendingFaction}</div>
+            <div>{props.attackerReward.asString}</div>
+            <div>{props.defenderReward.asString}</div>
+
+            <div>{props.activation}</div>
+            <div>{props.expiration}</div>
+            
+            <div>{props.expiration}</div>
+        </>
     );
 }
 
