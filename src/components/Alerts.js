@@ -15,10 +15,21 @@ class Alerts extends React.Component {
         };
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.platform !== prevProps.platform) {
+            this.fetchData(this.props.platform);
+        }
+    }
+
     componentDidMount() {
+        this.fetchData(this.props.platform);
+    }
+
+
+    fetchData(platform) {
         this.setState({ isLoading: true });
 
-        let url = API.replace('{platform}', this.state.platform);
+        let url = API.replace('{platform}', platform);
 
         fetch(url, {
             method: 'GET',

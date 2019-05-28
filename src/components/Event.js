@@ -18,8 +18,6 @@ function Event(props) {
         );
     });
 
-
-
     return (
         <>
             <div>{props.id}</div>

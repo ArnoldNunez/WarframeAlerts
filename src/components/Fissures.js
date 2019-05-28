@@ -9,16 +9,24 @@ class Fissures extends React.Component {
         super();
 
         this.state = {
-            platform: props.platform,
             fissures: [],
             isLoading: false,
         };
     }
 
-    componentDidMount() {
-        this.setState({ isLoading: true });
+    componentDidUpdate(prevProps) {
+        if (this.props.platform !== prevProps.platform) {
+            this.fetchData(this.props.platform);
+        }
+    }
 
-        let url = API.replace('{platform}', this.state.platform);
+    componentDidMount() {
+        this.fetchData(this.props.platform);
+    }
+
+    fetchData(platform) {
+        this.setState({ isLoading: true });
+        let url = API.replace('{platform}', platform);
 
         fetch(url, {
             method: 'GET',
@@ -36,7 +44,6 @@ class Fissures extends React.Component {
 
             this.setState(currState);
         }).catch(error => {
-            console.log(this.state);
             console.log('Problem with fetch operation in: Fissures->componentDidMount', error);
         });
     }
@@ -47,8 +54,6 @@ class Fissures extends React.Component {
         if (isLoading) {
             return <p>Loading...</p>;
         }
-
-        console.log("fissures", fissures);
 
         const fissureComponents = fissures.map((fissure) => {
             return (
