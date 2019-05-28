@@ -3,6 +3,7 @@ import React from 'react';
 // Warframe worldstate API: https://docs.warframestat.us/#tag/worldstate
 
 import Header from './components/Header';
+import HeroBox from './components/HeroBox';
 import Alerts from './components/Alerts';
 import Events from './components/Events';
 import Fissures from './components/Fissures';
@@ -30,9 +31,9 @@ class App extends React.Component {
 
         return (
             <div className="content">
-                <h1>Hello World from React Boilerplate</h1>
-
                 <Header platChangeHandler={this.changePlatform} />
+                <HeroBox />
+
                 <Alerts platform={platform} />
                 <Events platform={platform} />
                 <Fissures platform={platform} />

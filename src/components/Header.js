@@ -23,13 +23,25 @@ class Header extends React.Component {
 
         return (
             <header className="header--main">
-                <nav className="navigation">
-                    <ul>
-                        <li><button onClick={this.handleNavClick} value="pc">pc</button></li>
-                        <li><button onClick={this.handleNavClick} value="ps4">ps4</button></li>
-                        <li><button onClick={this.handleNavClick} value="xb1">xbox</button></li>
-                        <li><button onClick={this.handleNavClick} value="swi">switch</button></li>
-                    </ul>
+                <div className="header__logo-box">
+                    <span className="header__logo">WA</span>
+                </div>
+                <nav className="platform-nav">
+                    <div className="platform-nav__box">
+                        <button onClick={this.handleNavClick} value="pc">pc</button>
+                    </div>
+                    
+                    <div className="platform-nav__box">
+                        <button onClick={this.handleNavClick} value="ps4">ps4</button>
+                    </div>
+                    
+                    <div className="platform-nav__box">
+                        <button onClick={this.handleNavClick} value="xb1">xbox</button>
+                    </div>
+                    
+                    <div className="platform-nav__box">
+                        <button onClick={this.handleNavClick} value="swi">switch</button>
+                    </div>
                 </nav>
             </header>
         );
