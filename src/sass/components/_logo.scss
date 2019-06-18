@@ -1,0 +1,14 @@
+/**
+ * \file _logo.scss
+ *
+ * Partial sass file for logo css
+ */
+
+.header__logo {
+    color: $color-primary-blue;
+    text-transform: uppercase;
+
+    font-size: 1.5rem;
+
+    margin-left: 2rem;
+}

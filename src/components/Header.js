@@ -22,25 +22,25 @@ class Header extends React.Component {
     render() {
 
         return (
-            <header className="header--main">
+            <header className="header header--main">
                 <div className="header__logo-box">
-                    <span className="header__logo">WA</span>
+                    <span className="header__logo">Warframe Alerts</span>
                 </div>
                 <nav className="platform-nav">
                     <div className="platform-nav__box">
-                        <button onClick={this.handleNavClick} value="pc">pc</button>
+                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="pc">pc</button>
                     </div>
                     
                     <div className="platform-nav__box">
-                        <button onClick={this.handleNavClick} value="ps4">ps4</button>
+                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="ps4">ps4</button>
                     </div>
                     
                     <div className="platform-nav__box">
-                        <button onClick={this.handleNavClick} value="xb1">xbox</button>
+                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="xb1">xbox</button>
                     </div>
                     
                     <div className="platform-nav__box">
-                        <button onClick={this.handleNavClick} value="swi">switch</button>
+                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="swi">switch</button>
                     </div>
                 </nav>
             </header>

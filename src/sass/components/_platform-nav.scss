@@ -1,0 +1,19 @@
+/**
+ * \file _logo.scss
+ *
+ * Partial sass file for platform navigation
+ */
+
+.platform-nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__box {
+        background-color: red;
+    }
+
+    &__box:not(:last-child) {
+        margin-right: 2.4rem;
+    }
+}

@@ -1,11 +1,16 @@
 
 // Import abstracts
+@import 'abstracts/variables';
 
 // Import base
 @import 'base/base';
 
 // Import components
+@import 'components/logo';
+@import 'components/platform-nav';
 
 // Import layouts
+@import 'layout/content';
+@import 'layout/header';
 
 // import page specifics
