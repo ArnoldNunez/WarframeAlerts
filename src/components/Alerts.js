@@ -61,7 +61,7 @@ class Alerts extends React.Component {
         const alertComponents = alerts.map((alert) => {
             return (
                 <li className='alert-list--item' key={alert.id}>
-                    <Alert 
+                    <Alert className='alert'
                         id={alert.id}
                         node={alert.mission.node}
                         type={alert.mission.type}
@@ -79,7 +79,9 @@ class Alerts extends React.Component {
         
         return (
             <div className="alerts">
-                <h1>This is an Alerts component</h1>
+                <h2 className="heading-secondary">
+                    Alerts
+                </h2>
                 <ul className="alert-list">
                     {alertComponents}
                 </ul>

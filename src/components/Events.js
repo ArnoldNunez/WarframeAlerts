@@ -60,7 +60,7 @@ class Events extends React.Component {
         const eventComponents = this.state.events.map((e) => {
             return (
                 <li className='event-list--item' key={e.id}>
-                    <Event 
+                    <Event className='event'
                         id={e.id}
                         node={e.node}
                         expiration={e.expiry}
@@ -75,7 +75,9 @@ class Events extends React.Component {
         
         return (
             <div className="events">
-                <h1>This is an Events component</h1>
+                <h1 className="heading-secondary">
+                    Events
+                </h1>
                 <ul className="event-list">
                     {eventComponents}
                 </ul>
