@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CountDownTimer from './CountDownTimer';
+import Timer from './Timer';
 
 /**
  * Component representing an in-game event.
@@ -25,6 +25,8 @@ function Event(props) {
         );
     });
 
+    const curTime = Math.floor(new Date().getTime() / 1000);
+    
     return (
         <div className='event'>
             {/* <div>{props.id}</div> */}
@@ -33,7 +35,7 @@ function Event(props) {
             
             <div>{props.faction}</div>
 
-            <CountDownTimer activation={props.activation} expiration={props.expiration} />
+            <Timer activation={props.activation} expiration={props.expiration} curTime={curTime} />
             
             <ul className="event-rewards">
                 {rewards}
