@@ -1,0 +1,28 @@
+/**
+ * \file _fissure.scss
+ *
+ * Partial sass file for an event
+ */
+
+.fissure-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    list-style: none;
+
+    &--item {
+        flex: 0 0 300px;
+        border: thin solid black;
+        margin: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.fissure {
+    font-size: 1.4rem;
+}

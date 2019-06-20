@@ -6,10 +6,6 @@ function Timer (props) {
     const expiration = Math.floor(new Date(props.expiration).getTime() / 1000);
     let curTime = props.curTime;
 
-    console.log(activation);
-    console.log(expiration);
-    console.log(curTime);
-
     let delta = expiration - curTime;    // time difference in seconds
 
     let daysLeft = Math.floor(delta / 86400);
