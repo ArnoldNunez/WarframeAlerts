@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
 
 /**
  * Component representing an in-game Invasion.
@@ -21,7 +22,8 @@ function Invasion(props) {
                     <div>{props.defenderReward.asString}</div>
                 </div>
             </div>
-            <div>{props.completion}</div>
+
+            <div className="prog-bar-container"><ProgressBar completion={props.completion} height={'15px'} /></div>
         </div>
     );
 }
