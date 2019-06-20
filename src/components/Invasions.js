@@ -58,21 +58,24 @@ class Invasions extends React.Component {
         }
 
         const invasionComponents = invasions.map((invasion) => {
-            return (
-                <li className='invasion-list--item' key={invasion.id}>
-                    <Invasion 
-                        id={invasion.id}
-                        node={invasion.node}
-                        activation={invasion.activation}
-                        expiration={invasion.expiry}
-                        attackingFaction={invasion.attackingFaction}
-                        defendingFaction={invasion.defendingFaction}
-                        attackerReward={invasion.attackerReward}
-                        defenderReward={invasion.defenderReward}
-                    />
-                </li>
-            );
+            if (!invasion.completed) {
+                return (
+                    <li className='invasion-list--item' key={invasion.id}>
+                        <Invasion 
+                            id={invasion.id}
+                            desc={invasion.desc}
+                            node={invasion.node}
+                            attackingFaction={invasion.attackingFaction}
+                            attackerReward={invasion.attackerReward}
+                            defendingFaction={invasion.defendingFaction}
+                            defenderReward={invasion.defenderReward}
+                            completion={invasion.completion}
+                        />
+                    </li>
+                );
+            }
         });
+
         return (
             <div className="invasions">
                 <h1 className="heading-secondary">

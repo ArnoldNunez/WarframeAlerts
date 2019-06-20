@@ -1,0 +1,41 @@
+/**
+ * \file _invasion.scss
+ *
+ * Partial sass file for invasions
+ */
+
+.invasion-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    list-style: none;
+
+    &--item {
+        flex: 1 0 500px;
+        border: thin solid black;
+        margin: 1rem;
+    }
+}
+
+.invasion {
+    font-size: 1.4rem;
+
+    &__sides {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        align-content: space-between;
+
+        &--left {
+            margin-left: 1rem;
+        }
+
+        &--right {
+            margin-right: 1rem;
+        }
+    }
+}
