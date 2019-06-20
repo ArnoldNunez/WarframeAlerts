@@ -28,7 +28,7 @@ class Header extends React.Component {
                 </div>
                 <nav className="platform-nav">
                     <div className="platform-nav__box">
-                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="pc">pc</button>
+                        <button className="platform-nav__box-btn btn-selected" onClick={this.handleNavClick} value="pc">pc</button>
                     </div>
                     
                     <div className="platform-nav__box">

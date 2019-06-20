@@ -74,7 +74,7 @@ class Events extends React.Component {
         });
         
         return (
-            <div className="events">
+            <div className="events group">
                 <h1 className="heading-secondary">
                     Events
                 </h1>

@@ -12,16 +12,20 @@
 
     list-style: none;
 
+    background-color: $color-white-dark;
+
     &--item {
-        flex: 1 0 auto;
-        border: thin solid black;
+        flex: 1 0 300px;
+        border-radius: 2px;
         margin: 1rem;
+        background-color: $color-primary-white;
+        box-shadow: 0 0 2px 1px rgba($color-primary-black, .5);
     }
 }
 
 .event {
     font-size: 1.4rem;
-    
+    margin: 0 1rem;
 }
 
 .event-rewards {

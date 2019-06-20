@@ -77,7 +77,7 @@ class Invasions extends React.Component {
         });
 
         return (
-            <div className="invasions">
+            <div className="invasions group">
                 <h1 className="heading-secondary">
                     Invasions
                 </h1>

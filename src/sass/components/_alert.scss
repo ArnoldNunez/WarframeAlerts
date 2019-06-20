@@ -4,7 +4,27 @@
  * Partial sass file for an alert
  */
 
-.alert {
-    background-color: red;
-    
+.alert-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    list-style: none;
+
+    background-color: $color-white-dark;
+
+    &--item {
+        flex: 1 0 500px;
+        border-radius: 2px;
+        margin: 1rem;
+        background-color: $color-primary-white;
+        box-shadow: 0 0 2px 1px rgba($color-primary-black, .5);
+    }
 }
+
+.alert {
+    font-size: 1.4rem;
+    margin: 0 1rem;
+}
+

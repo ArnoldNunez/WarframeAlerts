@@ -10,10 +10,33 @@
     margin-right: auto;
 
     &__box {
-        background-color: red;
+        //background-color: red;
+
+        &-btn {
+            min-width: 100px;
+            min-height: 25px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        &-btn:hover {
+            background-color: rgba($color-primary-blue, .8);
+            background-image: none;
+            transform: translateY(-2px);
+        }
+
+        &-btn:active {
+            transform: translateY(0px);
+            box-shadow: 1px 1px 5px 5px #dedede;
+        }
     }
 
     &__box:not(:last-child) {
         margin-right: 2.4rem;
     }
+}
+
+.btn-selected {
+    border-bottom: 3px solid $color-primary-blue;
 }

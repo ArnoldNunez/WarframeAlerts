@@ -1,4 +1,5 @@
 import React from 'react';
+import Timer from './Timer';
 
 /**
  * Component representing an in-game alert.
@@ -7,20 +8,17 @@ import React from 'react';
 function Alert(props) {
 
     return (
-        <>
-            <span>{props.description}</span>
-            <span>{props.id}</span>
-            <span>{props.node}</span>
-            <span>{props.type}</span>
-            
-            <span>{props.faction}</span>
-            <span>{props.activation}</span>
-            <span>{props.rewardItems}</span>
-            <span>{props.rewardCredits}</span>
-            <span>{props.rewardThumbnail}</span>
+        <div className="alert">
+            <div className='cmpt-header-main'>{props.description}</div>
+            <div className='cmpt-header-sub'>{props.node}</div>
 
-            <span>{props.expiration}</span>
-        </>
+            <div>{props.faction}</div>
+            <div>{props.type}</div>
+            
+            <Timer activation={props.activation} expiration={props.expiration} curTime={curTime}/>
+
+            <div>{props.rewardString}</div>
+        </div>
     );
 }
 

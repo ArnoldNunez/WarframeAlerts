@@ -9,16 +9,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-between;
+    background-color: $color-white-dark;
 
     list-style: none;
 
     &--item {
-        flex: 0 0 300px;
-        border: thin solid black;
+        flex: 1 0 300px;
+        border-radius: 2px;
         margin: 1rem;
+        background-color: $color-primary-white;
+        box-shadow: 0 0 2px 1px rgba($color-primary-black, .5);
     }
 }
 
 .fissure {
     font-size: 1.4rem;
+    margin: 0 1rem;
 }

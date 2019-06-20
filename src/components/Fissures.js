@@ -73,7 +73,7 @@ class Fissures extends React.Component {
         });
 
         return (
-            <div className="Fissures">
+            <div className="fissures group">
                 <h1 className="heading-secondary">
                     Fissures
                 </h1>
