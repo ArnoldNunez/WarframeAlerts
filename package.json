@@ -2,10 +2,13 @@
   "name": "warframe-alerts",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://arnoldnunez.github.io/WarframeAlerts/",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "copy /Y public\\index.html dist",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Arnold N",
   "license": "ISC",
@@ -21,6 +24,7 @@
     "browser-sync": "^2.26.5",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^2.1.1",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

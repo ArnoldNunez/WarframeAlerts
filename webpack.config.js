@@ -4,7 +4,7 @@ var path = require("path");
 var BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
 
     entry: './src/index.js',
 
