@@ -8,6 +8,7 @@ import Alerts from './components/Alerts';
 import Events from './components/Events';
 import Fissures from './components/Fissures';
 import Invasions from './components/Invasions';
+import Footer from './components/Footer';
 
 class App extends React.Component {
     constructor() {
@@ -38,6 +39,8 @@ class App extends React.Component {
                 <Events platform={platform} />
                 <Fissures platform={platform} />
                 <Invasions platform={platform} />
+
+                <Footer />
             </div>
         )
     }

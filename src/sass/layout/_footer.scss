@@ -1,0 +1,48 @@
+/**
+ * \file _header.scss
+ *
+ * Partial sass file for the website footer.
+ */
+
+.footer {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    background-color: $color-primary-white;
+    border-top: 2px solid $color-primary-blue;
+    margin-top: 5rem;
+    padding: 2rem 4rem;
+
+    font-size: 1.2rem;
+}
+
+.social-mda {
+
+    &__link {        
+        font-size: 1.4rem;
+        margin: 0 1rem;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid $color-primary-blue;
+
+        & > a:link,
+        & > a:visited {
+            padding: .5rem;
+            text-decoration: none;
+            color: $color-primary-black;
+            transition: all .2s;
+        }
+
+        & > a:hover {
+            background-color: $color-primary-blue;
+            color: $color-white-dark;
+            box-shadow: 0 1rem 2rem rgba($color-primary-blue, .15);
+        }
+
+        & > a:active {
+            box-shadow: 0 .5rem 1rem rgba($color-primary-black, .15);
+        }
+    }
+}

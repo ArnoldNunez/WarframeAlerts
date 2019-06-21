@@ -10,20 +10,22 @@
     margin-right: auto;
 
     &__box {
-        //background-color: red;
 
         &-btn {
             min-width: 100px;
             min-height: 25px;
             border: none;
-            border-radius: 5px;
+            border-radius: 2px;
             text-transform: uppercase;
+            transition: all .2s;
+            cursor: pointer;
         }
 
         &-btn:hover {
             background-color: rgba($color-primary-blue, .8);
             background-image: none;
             transform: translateY(-2px);
+            color: $color-white-dark;
         }
 
         &-btn:active {
