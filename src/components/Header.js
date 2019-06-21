@@ -20,6 +20,7 @@ class Header extends React.Component {
     }
 
     render() {
+        const selBtn = this.state.activeBtn;
 
         return (
             <header className="header header--main">
@@ -28,19 +29,19 @@ class Header extends React.Component {
                 </div>
                 <nav className="platform-nav">
                     <div className="platform-nav__box">
-                        <button className="platform-nav__box-btn btn-selected" onClick={this.handleNavClick} value="pc">pc</button>
+                        <button className={"platform-nav__box-btn " + (selBtn == "pc" ? "btn-selected" : "")} onClick={this.handleNavClick} value="pc">pc</button>
                     </div>
                     
                     <div className="platform-nav__box">
-                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="ps4">ps4</button>
+                        <button className={"platform-nav__box-btn " + (selBtn == "ps4" ? "btn-selected" : "")} onClick={this.handleNavClick} value="ps4">ps4</button>
                     </div>
                     
                     <div className="platform-nav__box">
-                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="xb1">xbox</button>
+                        <button className={"platform-nav__box-btn " + (selBtn == "xb1" ? "btn-selected" : "")} onClick={this.handleNavClick} value="xb1">xbox</button>
                     </div>
                     
                     <div className="platform-nav__box">
-                        <button className="platform-nav__box-btn" onClick={this.handleNavClick} value="swi">switch</button>
+                        <button className={"platform-nav__box-btn " + (selBtn == "swi" ? "btn-selected" : "")} onClick={this.handleNavClick} value="swi">switch</button>
                     </div>
                 </nav>
             </header>
