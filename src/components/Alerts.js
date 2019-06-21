@@ -77,17 +77,22 @@ class Alerts extends React.Component {
                 </li>
             );
         });
+
+        if (alertComponents.length > 0) {
+            return (
+                <div className="alerts group">
+                    <h2 className="heading-secondary">
+                        Alerts
+                    </h2>
+                    <ul className="alert-list">
+                        {alertComponents}
+                    </ul>
+                </div>
+            );
+        }
+
         
-        return (
-            <div className="alerts group">
-                <h2 className="heading-secondary">
-                    Alerts
-                </h2>
-                <ul className="alert-list">
-                    {alertComponents}
-                </ul>
-            </div>
-        );
+        return <></>;
     }
 }
 

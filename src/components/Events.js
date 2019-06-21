@@ -73,16 +73,20 @@ class Events extends React.Component {
             );
         });
         
-        return (
-            <div className="events group">
-                <h1 className="heading-secondary">
-                    Events
-                </h1>
-                <ul className="event-list">
-                    {eventComponents}
-                </ul>
-            </div>
-        );
+        if (eventComponents.length > 0) {
+            return (
+                <div className="events group">
+                    <h1 className="heading-secondary">
+                        Events
+                    </h1>
+                    <ul className="event-list">
+                        {eventComponents}
+                    </ul>
+                </div>
+            );
+        } 
+        
+        return <></>;
     }
 }
 

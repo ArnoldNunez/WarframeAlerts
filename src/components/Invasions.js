@@ -76,16 +76,20 @@ class Invasions extends React.Component {
             }
         });
 
-        return (
-            <div className="invasions group">
-                <h1 className="heading-secondary">
-                    Invasions
-                </h1>
-                <ul className="invasion-list">
-                    {invasionComponents}
-                </ul>
-            </div>
-        );
+        if (invasionComponents.length > 0) {
+            return (
+                <div className="invasions group">
+                    <h1 className="heading-secondary">
+                        Invasions
+                    </h1>
+                    <ul className="invasion-list">
+                        {invasionComponents}
+                    </ul>
+                </div>
+            );
+        }
+
+        return <></>;
     }
 }
 

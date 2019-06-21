@@ -72,16 +72,20 @@ class Fissures extends React.Component {
             );
         });
 
-        return (
-            <div className="fissures group">
-                <h1 className="heading-secondary">
-                    Fissures
-                </h1>
-                <ul className="fissure-list">
-                    {fissureComponents}
-                </ul>
-            </div>
-        );
+        if (fissureComponents.length > 0) {
+            return (
+                <div className="fissures group">
+                    <h1 className="heading-secondary">
+                        Fissures
+                    </h1>
+                    <ul className="fissure-list">
+                        {fissureComponents}
+                    </ul>
+                </div>
+            );
+        }
+
+        return <></>;
     }
 }
 
