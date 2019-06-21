@@ -12,6 +12,8 @@ class Fissures extends React.Component {
             fissures: [],
             isLoading: false,
         };
+
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -22,6 +24,13 @@ class Fissures extends React.Component {
 
     componentDidMount() {
         this.fetchData(this.props.platform);
+        this.interval = setInterval(() => {
+            this.fetchData(this.props.platform);
+        }, 60000)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     fetchData(platform) {
@@ -50,10 +59,6 @@ class Fissures extends React.Component {
 
     render() {
         const { fissures, isLoading } = this.state;
-
-        if (isLoading) {
-            return <p>Loading...</p>;
-        }
 
         const fissureComponents = fissures.map((fissure) => {
             return (

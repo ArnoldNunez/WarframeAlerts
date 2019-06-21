@@ -13,6 +13,8 @@ class Invasions extends React.Component {
             invasions: [],
             isLoading: false,
         };
+
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -23,11 +25,17 @@ class Invasions extends React.Component {
 
     componentDidMount() {
         this.fetchData(this.props.platform);
+        this.interval = setInterval(() => {
+            this.fetchData(this.props.platform);
+        }, 1000 * 60 * 3)
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     fetchData(platform) {
         this.setState({ isLoading: true });
-
         let url = API.replace('{platform}', platform);
 
         fetch(url, {
@@ -52,10 +60,6 @@ class Invasions extends React.Component {
 
     render() {
         const { invasions, isLoading } = this.state;
-
-        if (isLoading) {
-            return <p>Loading...</p>;
-        }
 
         const invasionComponents = invasions.map((invasion) => {
             if (!invasion.completed) {

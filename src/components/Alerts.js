@@ -13,6 +13,8 @@ class Alerts extends React.Component {
             alerts: [],
             isLoading: false,
         };
+
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -23,12 +25,17 @@ class Alerts extends React.Component {
 
     componentDidMount() {
         this.fetchData(this.props.platform);
+        this.interval = setInterval(() => {
+            this.fetchData(this.props.platform);
+        }, 60000);
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
 
     fetchData(platform) {
         this.setState({ isLoading: true });
-
         let url = API.replace('{platform}', platform);
 
         fetch(url, {
@@ -53,10 +60,6 @@ class Alerts extends React.Component {
 
     render() {
         const { alerts, isLoading } = this.state;
-
-        if (isLoading) {
-            return <p>Loading...</p>;
-        }
 
         const alertComponents = alerts.map((alert) => {
             return (

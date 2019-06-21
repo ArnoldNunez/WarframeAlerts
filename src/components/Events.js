@@ -11,8 +11,10 @@ class Events extends React.Component {
         this.state = {
             platform: props.platform,
             events: [],
-            isLoading: false,
+            isLoading: false
         };
+
+        this.fetchData = this.fetchData.bind(this);
     }
 
     componentDidUpdate(prevProps) {
@@ -22,12 +24,18 @@ class Events extends React.Component {
     }
 
     componentDidMount() {
-        this.fetchData(this.props.platform);
+        this.fetchData(this.state.platform);
+        this.interval = setInterval(() => {
+            this.fetchData(this.state.platform);
+        }, 60000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     fetchData(platform) {
         this.setState({ isLoading: true });
-
         let url = API.replace('{platform}', platform);
 
         fetch(url, {
@@ -46,16 +54,12 @@ class Events extends React.Component {
 
             this.setState(currState);
         }).catch(error => {
-            console.log('Problem with fetch operation in: Alerts->componentDidMount');
+            console.log('Problem with fetch operation in: Alerts->componentDidMount', error);
         });
     }
 
     render() {
         const { events, isLoading } = this.state;
-
-        if (isLoading) {
-            return <p>Loading...</p>;
-        }
 
         const eventComponents = this.state.events.map((e) => {
             return (

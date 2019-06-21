@@ -7,9 +7,6 @@ import Timer from './Timer';
  * @param {*} props Data associated with one event.
  */
 function Event(props) {
-
-    console.log(props.rewards);
-
     const rewards = props.rewards.map(reward => {
         let imageUrl = reward.thumbnail;
         let text = reward.asString;
