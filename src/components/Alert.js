@@ -7,6 +7,8 @@ import Timer from './Timer';
  */
 function Alert(props) {
 
+    const curTime = Math.floor(new Date().getTime() / 1000);
+    
     return (
         <div className="alert">
             <div className='cmpt-header-main'>{props.description}</div>

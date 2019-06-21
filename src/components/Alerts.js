@@ -72,7 +72,7 @@ class Alerts extends React.Component {
                         expiration={alert.expiry}
                         description={alert.mission.description}
                         faction={alert.mission.faction}
-                        rewardString={alert.reward.asString}
+                        rewardString={alert.mission.reward.asString}
                         rewardItems={alert.mission.reward.items}
                         rewardCredits={alert.mission.reward.credits}
                         rewardThumbnail={alert.mission.reward.thumbnail}
