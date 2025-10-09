@@ -9,14 +9,16 @@ module.exports = {
     entry: './src/index.js',
 
     output: {
-        path: path.resolve(__dirname, '/dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: path.join(__dirname, 'dist'),
+        publicPath: '/dist/'
     },
 
     devServer: {
-        contentBase: path.resolve(__dirname, "public/"),
-        port: 2777,
-        publicPath: "http://localhost:2777/dist/"
+        static: {
+            directory: path.join(__dirname, "public")
+        },
+        port: 2777
     },
 
     module: {

@@ -10,16 +10,16 @@ function Invasion(props) {
         <div className="invasion">
             <div className="cmpt-header-main center-text">{props.desc}</div>
             <div className="cmpt-header-sub center-text">{props.node}</div>
-            
+
             <div className="invasion__sides">
                 <div className="invasion__sides--left">
                     <div>{props.attackingFaction}</div>
-                    <div>{props.attackerReward.asString}</div>
+                    {/* <div>{props.attackerReward.asString}</div> */}
                 </div>
-                
+
                 <div className="invasion__sides--right">
                     <div>{props.defendingFaction}</div>
-                    <div>{props.defenderReward.asString}</div>
+                    {/* <div>{props.defenderReward.asString}</div> */}
                 </div>
             </div>
 
